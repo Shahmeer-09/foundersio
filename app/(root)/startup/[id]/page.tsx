@@ -20,7 +20,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
   const [detail, playlist] = await Promise.all([
     client.fetch(Startup_detail, { id }),
-    client.fetch(Get_editorsPic, { slug: "editors-pick" }),
+    client.fetch(Get_editorsPic, { slug: "editors-choice" }),
   ]);
   if (!detail) return notFound();
   const parsedContent = md.render(detail?.pitch || "");

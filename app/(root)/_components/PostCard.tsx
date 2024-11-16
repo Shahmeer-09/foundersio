@@ -56,7 +56,7 @@ const PostCard = ({ post }: { post: PostCardTyp }) => {
       <Link href={`/startup/${_id}`}>
         <p className=" text-sm  mt-2 ">{description}</p>
       </Link>
-      <Image
+      <img
         src={image as string ||""}
         alt="post image"
         className="  rounded-lg  object-cover w-full mt-4 h-[170px]  "
